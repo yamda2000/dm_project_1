@@ -5,6 +5,9 @@
 ############################################################
 # 1. ライブラリの読み込み
 ############################################################
+# streamlitアプリの表示を担当するモジュール
+import streamlit as st
+
 # 「.env」ファイルから環境変数を読み込むための関数
 #from dotenv import load_dotenv
 #load_dotenv()
@@ -13,8 +16,7 @@ os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 # ログ出力を行うためのモジュール
 import logging
-# streamlitアプリの表示を担当するモジュール
-import streamlit as st
+
 # （自作）画面表示以外の様々な関数が定義されているモジュール
 import utils
 # （自作）アプリ起動時に実行される初期化処理が記述された関数
