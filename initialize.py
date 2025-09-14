@@ -11,7 +11,7 @@ from logging.handlers import TimedRotatingFileHandler
 from uuid import uuid4
 import sys
 import unicodedata
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import streamlit as st
 from docx import Document
 from langchain_community.document_loaders import WebBaseLoader
@@ -26,9 +26,7 @@ from pathlib import Path
 # 設定関連
 ############################################################
 # 「.env」ファイルで定義した環境変数の読み込み
-#load_dotenv()
-#os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+load_dotenv()
 
 ############################################################
 # 関数定義
